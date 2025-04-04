@@ -24,8 +24,9 @@ const navItems = [
           alt="Ambient Digital"
           class="logo-signet"
         />
-        <span class="logo-type"
-          >Ambient <span class="highlight">x</span> FIBO 2025</span
+        <span class="logo-type">
+          <span id="ambient-name">AMBIENT</span>
+          <span class="highlight">@</span> FIBO 2025</span
         >
       </div>
     </a>
@@ -253,6 +254,15 @@ const navItems = [
     .mobile-menu-btn.active span:nth-child(3) {
       transform: translateY(-9px) rotate(-45deg);
     }
+  }
+
+  #ambient-name {
+    font-family: "Karla";
+    font-weight: 200;
+    font-size: 0.875rem;
+    letter-spacing: 4px;
+    color: var(--color-white);
+    padding-bottom: 2px;
   }
 </style>
 
