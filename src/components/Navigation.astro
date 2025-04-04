@@ -217,10 +217,12 @@ const navItems = [
       width: 100%;
       flex-direction: column;
       align-items: stretch;
-      background: var(--glass-bg);
+      background: rgba(37, 37, 44, 0.8);
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       padding: var(--spacing-md);
       gap: var(--spacing-md);
+      z-index: 99;
       border-bottom: 1px solid var(--glass-border);
     }
 
