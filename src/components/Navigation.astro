@@ -1,0 +1,268 @@
+---
+const navItems = [
+  {
+    label: "Erfolge",
+    href: "/erfolge",
+  },
+  {
+    label: "Über uns",
+    href: "https://ambient.digital/agentur/ueber-uns/",
+  },
+  {
+    label: "Referenzen",
+    href: "https://ambient.digital/projekte/referenzen/",
+  },
+];
+---
+
+<header>
+  <nav class="container">
+    <a href="/" class="logo">
+      <div class="logo-text">
+        <img
+          src="/ambient-signet.svg"
+          alt="Ambient Digital"
+          class="logo-signet"
+        />
+        <span class="logo-type"
+          >Ambient <span class="highlight">x</span> FIBO 2025</span
+        >
+      </div>
+    </a>
+
+    <div class="nav-items">
+      {
+        navItems.map((item) => (
+          <a href={item.href} class="nav-link">
+            <span class="nav-link-text">{item.label}</span>
+          </a>
+        ))
+      }
+
+      <a
+        href="https://ambient.digital/beratung/"
+        class="btn btn-primary nav-cta"
+      >
+        Jetzt durchstarten
+        <div class="btn-shine"></div>
+      </a>
+    </div>
+
+    <button class="mobile-menu-btn" aria-label="Menü öffnen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    z-index: 100;
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--color-text);
+    transition: opacity 0.2s ease;
+  }
+
+  .logo:hover {
+    opacity: 0.8;
+  }
+
+  .logo-text {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-signet {
+    height: 32px;
+    width: auto;
+  }
+
+  .logo-type {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-type .highlight {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    font-weight: 400;
+    margin: 0 0.25rem;
+  }
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .nav-link {
+    position: relative;
+    padding: 0.5rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
+  }
+
+  .nav-link-text {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gradient-fibo);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::before {
+    width: calc(100% - 1rem);
+  }
+
+  .nav-cta {
+    font-family: var(--font-display);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    margin-left: var(--spacing-md);
+    padding: 0.75rem 1.5rem;
+  }
+
+  .btn-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      var(--glass-shine),
+      transparent
+    );
+    transform: translateX(-100%) rotate(45deg);
+    animation: shine 3s infinite;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-gray-light);
+    transition: all 0.3s ease;
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    20%,
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-items {
+      display: none;
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      padding: var(--spacing-md);
+      gap: var(--spacing-md);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-items.active {
+      display: flex;
+    }
+
+    .nav-link {
+      display: block;
+      text-align: center;
+      padding: var(--spacing-sm);
+    }
+
+    .nav-cta {
+      margin: 0;
+      text-align: center;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+  const navItems = document.querySelector(".nav-items");
+
+  mobileMenuBtn?.addEventListener("click", () => {
+    mobileMenuBtn.classList.toggle("active");
+    navItems?.classList.toggle("active");
+  });
+</script>

@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+const { title, description, buttonText, buttonLink } = Astro.props;
+---
+
+<section
+  class="bg-gradient-to-r from-primary-900 to-primary-800 rounded-2xl p-8 md:p-12 border border-primary-700/50"
+>
+  <div class="max-w-3xl mx-auto text-center relative">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+
+    <!-- Content -->
+    <div class="relative">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        {title}
+      </h2>
+      <p class="text-lg text-primary-200 mb-8">
+        {description}
+      </p>
+      <a
+        href={buttonLink}
+        class="inline-flex items-center justify-center bg-white text-primary-900 px-8 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors group"
+      >
+        {buttonText}
+        <svg
+          class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

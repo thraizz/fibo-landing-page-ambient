@@ -1,0 +1,255 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import gym1 from "../images/gym-kobe-kian-clata-4KdhlFjSV3k-unsplash.jpg";
+import gym2 from "../images/gym2-john-fornander-TAZoUmDqzXk-unsplash.jpg";
+import gym3 from "../images/gym3-edgar-chaparro-sHfo3WOgGTU-unsplash.jpg";
+import vrImage from "../images/vr-christine-sandu-VU3Gmeks-LY-unsplash.jpg";
+---
+
+<section class="case-studies">
+  <div class="container">
+    <h2 class="section-title">Zukunftsvisionen</h2>
+    <div class="case-studies-grid">
+      <div class="case-study-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="image-container">
+          <Image
+            src={gym1}
+            alt="KI-gestützte Fitness-Plattform"
+            class="case-study-image"
+          />
+          <div class="overlay">
+            <span class="category">KI & Fitness</span>
+          </div>
+        </div>
+        <div class="content">
+          <h3>KI-gestützte Fitness-Plattform</h3>
+          <p>
+            Revolutioniere dein Fitness-Business mit KI-gesteuerten
+            Trainingsanalysen und personalisierten Workouts
+          </p>
+          <ul class="metrics">
+            <li>
+              <span class="metric">+200%</span>
+              <span class="label">Potenzielle Effizienzsteigerung</span>
+            </li>
+            <li>
+              <span class="metric">95%</span>
+              <span class="label">Prognostizierte Kundenzufriedenheit</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-study-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="image-container">
+          <Image
+            src={vrImage}
+            alt="VR Fitness Experience"
+            class="case-study-image"
+          />
+          <div class="overlay">
+            <span class="category">Virtual Reality</span>
+          </div>
+        </div>
+        <div class="content">
+          <h3>VR Fitness Experience</h3>
+          <p>
+            Erschaffe immersive VR-Trainingswelten für die nächste Generation
+            des Fitness-Trainings
+          </p>
+          <ul class="metrics">
+            <li>
+              <span class="metric">40K+</span>
+              <span class="label">Potenzielle Nutzer im ersten Jahr</span>
+            </li>
+            <li>
+              <span class="metric">80%</span>
+              <span class="label">Erwartete Engagement-Rate</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-study-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="image-container">
+          <Image
+            src={gym3}
+            alt="Smart Gym Equipment"
+            class="case-study-image"
+          />
+          <div class="overlay">
+            <span class="category">IoT & Blockchain</span>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Smart Gym Equipment</h3>
+          <p>
+            Vernetze deine Geräteflotte mit IoT und Blockchain für maximale
+            Transparenz und Effizienz
+          </p>
+          <ul class="metrics">
+            <li>
+              <span class="metric">50%</span>
+              <span class="label">Mögliche Kosteneinsparung</span>
+            </li>
+            <li>
+              <span class="metric">3.0M</span>
+              <span class="label">Potenzielle vernetzte Geräte</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .case-studies {
+    background: #0a0a0a;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 0%, #6a00ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: 2rem;
+  }
+
+  .case-study-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .case-study-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .image-container {
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    flex: 0 0 auto;
+  }
+
+  .case-study-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .case-study-card:hover .case-study-image {
+    transform: scale(1.1);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 240, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+  }
+
+  .category {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .metrics {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    margin-top: auto;
+  }
+
+  .metric {
+    display: block;
+    color: #00f0ff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .case-studies-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .metrics {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

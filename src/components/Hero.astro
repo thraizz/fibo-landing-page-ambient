@@ -1,0 +1,337 @@
+<section class="hero">
+  <div class="hero-background">
+    <div class="gradient-sphere"></div>
+    <div class="energy-lines"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">FIBO 2025 POWER-SPECIAL</div>
+
+    <h1>
+      <div class="headline-top">
+        <span class="gradient-text-power">LIFT</span> YOUR
+      </div>
+      <div class="headline-bottom">
+        <span class="gradient-text">DIGITAL GAINS</span>
+        <div class="energy-bolt">⚡️</div>
+      </div>
+    </h1>
+
+    <p class="hero-subtitle">
+      Keine halben Sachen: Stärke dein Business mit Innovationen wie KI, VR und
+      Blockchain.
+      <br />
+      Ambient Digital – wir spotten dich beim digitalen Aufstieg.
+    </p>
+
+    <div class="hero-cta">
+      <a href="https://ambient.digital/beratung/" class="btn btn-primary">
+        Jetzt Gewichte bewegen
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+      <a
+        href="https://ambient.digital/projekte/referenzen/"
+        class="btn btn-secondary"
+        >Success Stories
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number gradient-text-power">150+</span>
+        <span class="stat-label">Projekt-PRs</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number gradient-text">15+ Jahre</span>
+        <span class="stat-label">Trainingsplan</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number gradient-text-motion">24/7</span>
+        <span class="stat-label">Spot & Support</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div class="arrows">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</section>
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .gradient-sphere {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 1200px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 0, 102, 0.15) 0%,
+      rgba(0, 230, 255, 0.15) 50%,
+      rgba(17, 17, 17, 0) 100%
+    );
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: pulse 8s ease-in-out infinite;
+  }
+
+  .energy-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 0, 102, 0.05) 2px,
+      rgba(255, 0, 102, 0.05) 4px
+    );
+    animation: energyWave 20s linear infinite;
+  }
+
+  .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--color-gray) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-gray) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: fit-content;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 0, 102, 0.1);
+    border: 1px solid var(--color-energy);
+    border-radius: var(--border-radius);
+    color: var(--color-energy);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-md);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  h1 {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+  .headline-top {
+    font-size: 0.5em;
+    margin-bottom: 0.5rem;
+  }
+
+  .headline-bottom {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .energy-bolt {
+    font-size: 0.8em;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    opacity: 0.8;
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 300;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .btn svg {
+    margin-left: 0.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: var(--color-text);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.5;
+  }
+
+  .mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--color-text);
+    border-radius: 15px;
+    position: relative;
+  }
+
+  .wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--color-text);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s ease-in-out infinite;
+  }
+
+  .arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arrows span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+    transform: rotate(45deg);
+    animation: arrows 2s infinite;
+  }
+
+  .arrows span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .arrows span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, 20px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes arrows {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+  }
+</style>

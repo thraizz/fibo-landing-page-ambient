@@ -1,0 +1,75 @@
+---
+import "../style.css";
+import Navigation from "../components/Navigation.astro";
+const {
+  title = "Ambient Digital - FIBO 2025",
+  description = "Ambient Digital transformiert die Fitness- und Gesundheitsbranche. Innovative Digitallösungen für Content Creator, Fitness-Studios und Event-Veranstalter. Powered by KI, VR/AR und Blockchain.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Preload Critical Fonts -->
+    <link
+      rel="preload"
+      href="/fonts/Archia/Archia-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Karla/Karla-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+
+    <!-- Font Metric Fallbacks -->
+    <style>
+      /* Archia font metrics */
+      @font-face {
+        font-family: "Archia Fallback";
+        src: local(Arial);
+        ascent-override: 90%;
+        descent-override: 22%;
+        line-gap-override: 0%;
+        size-adjust: 105%;
+      }
+
+      /* Karla font metrics */
+      @font-face {
+        font-family: "Karla Fallback";
+        src: local(Arial);
+        ascent-override: 93%;
+        descent-override: 24%;
+        line-gap-override: 0%;
+        size-adjust: 102%;
+      }
+
+      :root {
+        --font-display: "Archia", "Archia Fallback", system-ui, sans-serif;
+        --font-body: "Karla", "Karla Fallback", system-ui, sans-serif;
+      }
+    </style>
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navigation />
+    <slot />
+  </body>
+</html>

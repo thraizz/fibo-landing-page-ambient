@@ -1,0 +1,213 @@
+<section class="cta">
+  <div class="container">
+    <div class="cta-card">
+      <div class="content">
+        <h2>Bereit für die digitale Revolution?</h2>
+        <p>
+          Lass uns gemeinsam deine digitale Transformation starten und neue
+          Maßstäbe in der Fitness-Branche setzen.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="https://ambient.digital/beratung/" class="btn btn-primary">
+            Gespräch vereinbaren
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="/demo" class="btn btn-secondary">
+            Demo erleben
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M10 8l6 4-6 4V8z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="decoration">
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .cta-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 32px;
+    padding: 4rem;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #fff 0%, #00f0ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn svg {
+    transition: transform 0.3s ease;
+  }
+
+  .btn:hover svg {
+    transform: translateX(4px);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #00f0ff 0%, #6a00ff 100%);
+    color: #fff;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(106, 0, 255, 0.3);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    overflow: hidden;
+  }
+
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+  }
+
+  .glow-orb:nth-child(1) {
+    background: #00f0ff;
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+  }
+
+  .glow-orb:nth-child(2) {
+    background: #6a00ff;
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: 100px;
+  }
+
+  .glow-orb:nth-child(3) {
+    background: #ff00f0;
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: -50px;
+  }
+
+  @media (max-width: 768px) {
+    .cta-card {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .content {
+      max-width: 100%;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .decoration {
+      display: none;
+    }
+  }
+</style>
