@@ -100,7 +100,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     text-align: center;
     margin-bottom: 4rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #fff 0%, #00f0ff 100%);
+    background: linear-gradient(135deg, #fff 0%, var(--) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -181,24 +181,3 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     }
   }
 </style>
-
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  const cards = document.querySelectorAll(".benefit-card");
-
-  cards.forEach((card, index) => {
-    gsap.from(card, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      delay: index * 0.2,
-      scrollTrigger: {
-        trigger: card,
-        start: "top bottom-=100",
-        end: "top center",
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
-</script>

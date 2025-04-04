@@ -1,3 +1,7 @@
+---
+import LottieAnimation from "./LottieAnimation.astro";
+---
+
 <section class="hero">
   <div class="hero-background">
     <div class="gradient-sphere"></div>
@@ -8,13 +12,19 @@
   <div class="hero-content">
     <div class="hero-badge">FIBO 2025 POWER-SPECIAL</div>
 
-    <h1>
+    <h1 class="hero-title">
       <div class="headline-top">
         <span class="gradient-text-power">LIFT</span> YOUR
       </div>
       <div class="headline-bottom">
         <span class="gradient-text">DIGITAL GAINS</span>
-        <div class="energy-bolt">⚡️</div>
+      </div>
+      <div class="lifting-guy">
+        <LottieAnimation
+          src="/animations/guy-doing-bicep-curls.json"
+          width="100%"
+          height="100%"
+        />
       </div>
     </h1>
 
@@ -141,11 +151,15 @@
   }
 
   .hero-content {
+    /* overflow: hidden; */
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
     width: fit-content;
-    z-index: 1;
+    z-index: 10;
+    /* background-color: rgba(21, 27, 49, 0.8); */
+    padding: 4rem;
+    border-radius: 1rem;
   }
 
   .hero-badge {
@@ -173,26 +187,25 @@
   .headline-top {
     font-size: 0.5em;
     margin-bottom: 0.5rem;
+    z-index: 10;
   }
 
   .headline-bottom {
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
-
-  .energy-bolt {
-    font-size: 0.8em;
-    animation: float 3s ease-in-out infinite;
+    z-index: 10;
   }
 
   .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--color-text);
-    opacity: 0.8;
+    color: white;
     max-width: 600px;
     margin-bottom: var(--spacing-lg);
     font-weight: 300;
+    /* background-color: rgba(21, 27, 49, 0.8); */
+    padding: 1rem;
+    border-radius: 1rem;
   }
 
   .hero-cta {
@@ -333,5 +346,18 @@
     .scroll-indicator {
       display: none;
     }
+  }
+
+  .hero-title {
+    position: relative;
+  }
+
+  .lifting-guy {
+    position: absolute;
+    top: -19rem;
+    right: -22rem;
+    overflow: hidden;
+    opacity: 0.4;
+    z-index: -10;
   }
 </style>
