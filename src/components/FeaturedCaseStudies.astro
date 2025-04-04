@@ -124,7 +124,11 @@ import vrImage from "../images/vr-christine-sandu-VU3Gmeks-LY-unsplash.jpg";
     text-align: center;
     margin-bottom: 4rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #fff 0%, #6a00ff 100%);
+    background: linear-gradient(
+      105deg,
+      var(--color-primary-dark) 0%,
+      var(--color-primary) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -184,7 +188,7 @@ import vrImage from "../images/vr-christine-sandu-VU3Gmeks-LY-unsplash.jpg";
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background: rgba(0, 240, 255, 0.2);
+    background: var(--color-primary);
     backdrop-filter: blur(8px);
     padding: 0.5rem 1rem;
     border-radius: 100px;
@@ -227,7 +231,7 @@ import vrImage from "../images/vr-christine-sandu-VU3Gmeks-LY-unsplash.jpg";
 
   .metric {
     display: block;
-    color: #00f0ff;
+    color: var(--color-primary);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.25rem;

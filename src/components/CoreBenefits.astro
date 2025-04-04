@@ -100,7 +100,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     text-align: center;
     margin-bottom: 4rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #fff 0%, var(--) 100%);
+    background: linear-gradient(
+      20deg,
+      var(--color-primary-dark) 0%,
+      var(--color-primary) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -121,6 +125,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+
+    h3 {
+      color: var(--color-primary);
+    }
+
+    .icon {
+      color: var(--color-primary);
+    }
   }
 
   .card-glow {

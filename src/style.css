@@ -63,6 +63,7 @@
 
   /* Ambient CI Colors */
   --color-primary: #ff5959; /* Primary Red */
+  --color-primary-dark: #ff3434;
   --color-black: #000000; /* Dark Black */
   --color-bg: #25252c; /* Black Background */
   --color-gray-dark: #78787e; /* Dark Grey */
