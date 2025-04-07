@@ -194,4 +194,4 @@ Unsere Landing Page wird Ambient als revolutionäre Kraft in der digitalen Trans
 
 ---
 
-Mit ❤️ erstellt vom Ambient Digital Team
+Mit ❤️ erstellt vom Ambient Team
